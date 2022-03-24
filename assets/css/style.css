@@ -7,7 +7,7 @@
 body {
     background-color: #d9dcd6;
 }
-/*everything in the header is from line 10 to line 49*/
+/*tried to take out and combine as much of the unnecessary header elements as possible*/
 header {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -16,6 +16,8 @@ header {
     display: flex;
     align-items: right;
     justify-content: space-between;
+    position: fixed;
+    width: 100%;
 }
 
 header h1 {
@@ -23,8 +25,17 @@ header h1 {
     font-size: 48px;
 }
 
+/*made seo its own ID since its a unique element that isn't used anywhere else on the page*/
 #seo {
     color: #d9dcd6;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+header nav ul li {
+    display: inline-block;
+    margin-left: 25px;
 }
 
 .navbar {
@@ -32,14 +43,6 @@ header h1 {
     margin-right: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
-}
-
-header div ul {
-    list-style-type: none;
-}
-header div ul li {
-    display: inline-block;
-    margin-left: 25px;
 }
 
 a {
@@ -69,13 +72,36 @@ p {
     float: right;
     margin-left: 25px;
 }
-
+/*decided to start with services immediately after the header since that's the first thing the user will see*/
 .content {
     width: 75%;
     display: inline-block;
     margin-left: 20px;
+    background-color: #0072bb;
 }
 
+.services {
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
+    color: #ffffff;
+}
+
+/*Since the images were the same basic parameters, I set them as the same class*/
+.services img {
+    max-height: 200px;
+}
+
+/*There were 3 elements for the h2s all with the same parameters, so I changed it to 1 and set them as the same class*/
+.services h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+
+/*moved the benefits from above services to below it since that's how it is on the site*/
 .benefits {
     margin-right: 20px;
     padding: 20px;
@@ -103,31 +129,19 @@ p {
     max-width: 150px;
 }
 
-.services {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.services img {
-    max-height: 200px;
-}
-
-.services h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
+/*Put the font size in the footer to make it more concise*/
 footer {
     padding: 30px;
     clear: both;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
+    font-size: 20px;
 }
 
-footer h2 {
-    font-size: 20px;
+@media screen and (max-width: 700px) {
+    header {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }  
 }
