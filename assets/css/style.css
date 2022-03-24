@@ -7,7 +7,8 @@
 body {
     background-color: #d9dcd6;
 }
-/*tried to take out and combine as much of the unnecessary header elements as possible*/
+
+/*tried to combine as much of the header elements as possible to make it cleaner*/
 header {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -16,7 +17,6 @@ header {
     display: flex;
     align-items: right;
     justify-content: space-between;
-    position: fixed;
     width: 100%;
 }
 
@@ -25,7 +25,7 @@ header h1 {
     font-size: 48px;
 }
 
-/*made seo its own ID since its a unique element that isn't used anywhere else on the page*/
+/*made seo an ID since its a unique element that isn't used anywhere else on the page*/
 #seo {
     color: #d9dcd6;
 }
@@ -33,12 +33,13 @@ header h1 {
 header nav ul {
     list-style-type: none;
 }
+
 header nav ul li {
     display: inline-block;
     margin-left: 25px;
 }
 
-.navbar {
+nav {
     padding-top: 15px;
     margin-right: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -54,7 +55,8 @@ p {
     font-size: 16px;
 }
 
-.hero {
+/*changed the cover photo class name from "hero" to "cover" for accessibility accuracy*/
+.cover {
     height: 800px;
     width: 100%;
     margin-bottom: 25px;
@@ -62,7 +64,6 @@ p {
     background-size: cover;
     background-position: center;
 }
-
 
 /*decided to start with services immediately after the header since that's the first thing the user will see*/
 .content {
@@ -95,12 +96,12 @@ p {
     float: right;
     margin-left: 25px;
 }
+
 /*There were 3 elements for the h2s all with the same parameters, so I changed it to 1 and set them as the same class*/
 .services h2 {
     margin-bottom: 20px;
     font-size: 36px;
 }
-
 
 /*moved the benefits from above services to below it since that's how it is on the site*/
 .benefits {
@@ -130,7 +131,7 @@ p {
     max-width: 150px;
 }
 
-/*Put the font size in the footer to make it more concise*/
+/*Put the font size in the footer rather than another element to make it more concise*/
 footer {
     padding: 30px;
     clear: both;
