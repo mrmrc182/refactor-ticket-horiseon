@@ -63,15 +63,7 @@ p {
     background-position: center;
 }
 
-.float-left {
-    float: left;
-    margin-right: 25px;
-}
 
-.float-right {
-    float: right;
-    margin-left: 25px;
-}
 /*decided to start with services immediately after the header since that's the first thing the user will see*/
 .content {
     width: 75%;
@@ -93,6 +85,16 @@ p {
     max-height: 200px;
 }
 
+/*moved the floats below the services img since that's where they are in the HTML*/
+.float-left {
+    float: left;
+    margin-right: 25px;
+}
+
+.float-right {
+    float: right;
+    margin-left: 25px;
+}
 /*There were 3 elements for the h2s all with the same parameters, so I changed it to 1 and set them as the same class*/
 .services h2 {
     margin-bottom: 20px;
@@ -135,12 +137,4 @@ footer {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
     font-size: 20px;
-}
-
-@media screen and (max-width: 700px) {
-    header {
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-    }  
 }
